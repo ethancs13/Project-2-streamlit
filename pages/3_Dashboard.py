@@ -63,12 +63,9 @@ col1, col2, col3, col4 = st.columns(4)
 col1.metric("Tracks in selection", f"{len(filtered):,}",
             f"{len(filtered) / len(df):.0%} of all tracks", delta_color="primary", delta_arrow="off")
 
-# Most popular track in the selection. Long names are shortened to fit the card.
+# Most popular track in the selection. Names that don't fit end in "..." (hover for the full name).
 top_track = filtered.loc[filtered["track_popularity"].idxmax()]
-name = top_track["track_name"]
-if len(name) > 22:
-    name = name[:22].strip() + "..."
-col2.metric("Most popular track", name,
+col2.metric("Most popular track", top_track["track_name"],
             f"{top_track['track_artist']} ({top_track['track_popularity']}/100)",
             delta_color="primary", delta_arrow="off",
             help=f"{top_track['track_name']} by {top_track['track_artist']} has the highest "

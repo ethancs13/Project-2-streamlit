@@ -1,4 +1,4 @@
-# EDA Gallery: five different chart types, each one answers a question about the data.
+# EDA Gallery: six charts, each one answers a question about the data.
 # Each chart is in its own tab. Under each chart: "How to read" on the left, observations on the right.
 
 import pandas as pd
@@ -39,7 +39,7 @@ with tab1:
         title=f"Distribution of track popularity - {choice} ({len(hist_data):,} tracks)",
         labels={"track_popularity": "Track popularity (0-100)"},
     )
-    fig.update_traces(xbins=dict(start=0, end=101, size=5), marker_line_color="#121212",
+    fig.update_traces(xbins={"start": 0, "end": 101, "size": 5}, marker_line_color="#121212",
                       marker_line_width=1)
     fig.update_layout(yaxis_title="Number of tracks")
 

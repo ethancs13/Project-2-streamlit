@@ -4,7 +4,7 @@ import os
 
 import streamlit as st
 
-from utils.ui import card, footer, page_header, setup_page
+from utils.ui import STATS_FU, card, footer, page_header, setup_page
 
 setup_page("Future Work")
 
@@ -23,9 +23,11 @@ steps = [
      "artist to their earliest release, or drop them if no match is found. Then I'll re-check the "
      "Genre Trends chart, since the \"older Rock songs score higher\" finding may change."),
     ("2", "Popularity then vs. now",
-     "Every popularity score here is from January 2020. Using the same track IDs, I want to pull "
-     "today's popularity from the Spotify Web API and compare the two. That would show which songs "
-     "and genres grew or faded, and it's the only way to really answer how popularity changes over time."),
+     f"Every popularity score here is from January 2020. I already built [stats.fu]({STATS_FU}), a Spotify stats app "
+     "that logs in with Spotify and reads track popularity, so I can reuse its login to pull today's "
+     "popularity for the same track IDs and compare the two. That would show which songs and genres "
+     "grew or faded. Spotify stopped giving new apps audio features in November 2024, so this "
+     "comparison would cover popularity only."),
     ("3", "Explain the zero-popularity tracks",
      "2,616 tracks (about 9%) score exactly 0. Only 329 of them are a copy of a song that has a "
      "real score somewhere else, so duplicates explain just part of it. Next I'll check album type "

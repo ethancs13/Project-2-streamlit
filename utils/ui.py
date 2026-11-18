@@ -7,6 +7,7 @@ TAGLINE = "Data Science & Machine Learning Student, Metropolitan State Universit
 LINKEDIN = "https://www.linkedin.com/in/ethan-sroka-8402631a2/"
 WEBSITE = "https://ethansroka.dev"
 GITHUB_LAB = "https://github.com/ethancs13/gelkube-labs"
+STATS_FU = "https://github.com/ethancs13/stats.fu"
 
 # Spotify-style colors for the app
 GREEN = "#1DB954"
@@ -43,6 +44,9 @@ div[class*="st-key-hero"] {
     background-color: #181818;
     border-radius: 12px;
     padding: 0.8rem 1rem;
+}
+[data-testid="stMetricValue"] {
+    font-size: 1.75rem;
 }
 div[class*="st-key-profile"] img {
     border-radius: 50%;
@@ -99,14 +103,14 @@ card_count = 0
 def card():
     # Returns a container with a dark gray background (styled by the CSS above).
     # Each card needs its own key, so a counter is added to the name.
-    global card_count
+    global card_count  # pylint: disable=global-statement
     card_count += 1
     return st.container(border=True, key=f"card_{card_count}")
 
 
 def setup_page(title):
     # Page settings, the CSS, and the sidebar with my name and links
-    global card_count
+    global card_count  # pylint: disable=global-statement
     card_count = 0
     st.set_page_config(page_title=title + " | " + NAME, layout="wide")
     st.markdown(CSS, unsafe_allow_html=True)

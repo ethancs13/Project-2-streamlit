@@ -71,8 +71,21 @@ part1/                  Part 1 write-up (5E Data Questioning Cycle)
 - Every chart has a descriptive title, labeled axes, and units. Bar charts start at zero.
 
 ## Screenshots
-_Add 1-3 screenshots to `assets/screenshots/` and link them here, for example:_
-`![Dashboard](assets/screenshots/dashboard.png)`
+
+<table>
+  <tr>
+    <th>Home</th>
+    <th>EDA Gallery</th>
+    <th>Dashboard</th>
+  </tr>
+  <tr>
+    <td valign="top" width="33%"><a href="assets/screenshots/home.png"><img src="assets/screenshots/home.png" width="100%" alt="Home page with a green banner, the app title &quot;What makes a song popular on Spotify?&quot;, dataset facts and links to each page"></a></td>
+    <td valign="top" width="33%"><a href="assets/screenshots/eda_gallery.png"><img src="assets/screenshots/eda_gallery.png" width="100%" alt="EDA Gallery showing the popularity histogram tab, with a How to read this chart card and an Observations card below it"></a></td>
+    <td valign="top" width="33%"><a href="assets/screenshots/dashboard.png"><img src="assets/screenshots/dashboard.png" width="100%" alt="Dashboard with sidebar filters, four KPI cards, popularity and energy line charts, and genre and subgenre bar charts"></a></td>
+  </tr>
+</table>
+
+_Click a screenshot to see it full size._
 
 ## AI Assistance
 I used Claude (Anthropic) to help write code, draft text, and generate questions for Part 1. I reviewed and edited everything.

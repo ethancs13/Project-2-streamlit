@@ -4,7 +4,7 @@ import os
 
 import streamlit as st
 
-from utils.ui import (GITHUB_LAB, LINKEDIN, NAME, TAGLINE, WEBSITE, card, footer,
+from utils.ui import (GITHUB_LAB, LINKEDIN, NAME, STATS_FU, TAGLINE, WEBSITE, card, footer,
                       page_header, setup_page)
 
 setup_page("Bio")
@@ -35,6 +35,7 @@ with left:
         st.link_button("LinkedIn", LINKEDIN, width="stretch")
         st.link_button("ethansroka.dev", WEBSITE, width="stretch")
         st.link_button("Home lab on GitHub", GITHUB_LAB, width="stretch")
+        st.link_button("stats.fu on GitHub", STATS_FU, width="stretch")
 
 # ----- Summary and highlights -----
 with right:
@@ -56,7 +57,8 @@ with right:
             st.caption("DSML program at Metro State: data visualization, statistics and machine learning.")
         with card():
             st.markdown("**Full-stack apps**")
-            st.caption("React, Node.js / Express, MongoDB and Flutter.")
+            st.caption(f"React, Node.js / Express, MongoDB and Flutter, including [stats.fu]({STATS_FU}), "
+                       "a Spotify stats app built with the Spotify Web API.")
     with col2:
         with card():
             st.markdown("**Data tools**")

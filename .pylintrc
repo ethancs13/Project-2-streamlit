@@ -1,0 +1,11 @@
+# Pylint settings for this project
+[FORMAT]
+# Many lines are long text strings (chart explanations), so allow up to 120 characters
+max-line-length=120
+
+[MESSAGES CONTROL]
+# invalid-name: Streamlit page files must start with a number (1_Bio.py), which pylint dislikes
+# missing-*-docstring: this project uses short # comments instead of docstrings
+disable=invalid-name,
+        missing-module-docstring,
+        missing-function-docstring

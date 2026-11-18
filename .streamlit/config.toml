@@ -1,0 +1,21 @@
+# Spotify-style dark theme: black background, dark gray cards, green accents.
+[theme]
+base = "dark"
+primaryColor = "#1DB954"
+backgroundColor = "#121212"
+secondaryBackgroundColor = "#242424"
+textColor = "#FFFFFF"
+linkColor = "#1ED760"
+borderColor = "#2A2A2A"
+baseRadius = "large"
+font = "sans serif"
+headingFontWeights = [800, 700, 700, 600, 600, 600]
+# Colorblind-safe genre colors (checked against the dark background)
+chartCategoricalColors = ["#3987e5", "#d95926", "#199e70", "#c98500", "#d55181", "#9085e9"]
+
+[theme.sidebar]
+backgroundColor = "#000000"
+secondaryBackgroundColor = "#181818"
+
+[server]
+runOnSave = true
